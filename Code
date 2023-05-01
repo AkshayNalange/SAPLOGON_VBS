@@ -1,8 +1,8 @@
 ' Define SAP Logon parameters
-system = "XXYYZZZ"
+system = "NPS"
 client = "100"
-user = "XXXXXX"
-password = "PWXXXX2023"
+user = "JIMO46"
+password = "PW462023"
 language = "EN"
 
 ' Create SAP Logon object
