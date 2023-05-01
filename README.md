@@ -6,10 +6,10 @@ This repository contains a VBS script that enables the user to log in to SAP wit
 1. Download the SAPLogon.vbs file from the Code directory in this repository.
 2. Update following parameterswith actual values.
   
-  system = "ECC Production"
-  client = "100"
-  user = "DDIC"
-  password = "PWDDIC2023"
+  system = "YYYYYY"
+  client = "XXXX"
+  user = "XXXX"
+  password = "PWXXXX023"
   language = "EN"
   
 3. Double-click on the SAPLogon.vbs file to open it.
