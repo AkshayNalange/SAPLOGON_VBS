@@ -1,0 +1,22 @@
+' Define SAP Logon parameters
+system = "XXYYZZZ"
+client = "100"
+user = "XXXXXX"
+password = "PWXXXX2023"
+language = "EN"
+
+' Create SAP Logon object
+Set SapGuiAuto = GetObject("SAPGUI")
+Set application = SapGuiAuto.GetScriptingEngine
+Set connection = application.OpenConnection(system, True)
+
+' Log on to SAP system
+Set session = connection.Children(0)
+session.findById("wnd[0]/usr/txtRSYST-BNAME").Text = user
+session.findById("wnd[0]/usr/pwdRSYST-BCODE").Text = password
+session.findById("wnd[0]").sendVKey 0
+
+' Switch to desired client and language
+session.findById("wnd[0]/tbar[0]/okcd").Text = "/n"
+session.findById("wnd[0]/tbar[0]/okcd").Text = "/n" & client & "/" & language
+session.findById("wnd[0]").sendVKey 0
